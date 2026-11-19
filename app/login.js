@@ -1,19 +1,7 @@
 
 import React, { useState } from "react";
 
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
-  Alert,
-  Image,
-  StatusBar,
-  ScrollView,
-  KeyboardAvoidingView,
-  Platform
-} from "react-native";
+import {View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image, StatusBar, ScrollView, KeyboardAvoidingView, Platform} from "react-native";
 
 export default function Login() {
   const [matricula, setMatricula] = useState("");
