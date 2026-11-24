@@ -85,7 +85,7 @@ export default function Inicio() {
         <View style={Styles.header}>
           <View style={Styles.headerLeft}>
             <Image
-              source={require("../assets/logo-senai.png")}
+              source={require("../../assets/logoSenai.png")}
               style={Styles.logo}
               resizeMode="contain"
             />
