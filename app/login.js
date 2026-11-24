@@ -15,21 +15,22 @@ import {
   Platform
 } from "react-native";
 
+import { useRouter } from "expo-router";
+
 export default function Login() {
+  const router = useRouter();
+
   const [matricula, setMatricula] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
   function entrar() {
     if (!matricula.trim() || !senha.trim()) {
-      Alert.alert("Atenção", "Preencha todos os campos.");
+      Alert.alert("Atenção", "Preencha a matrícula e a senha.");
       return;
     }
 
-    Alert.alert(
-      "Login",
-      "A autenticação será conectada à API posteriormente."
-    );
+    router.replace("/telas_em_geral/inicio");
   }
 
   return (
