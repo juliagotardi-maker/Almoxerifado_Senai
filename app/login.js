@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-
 import {
   View,
   Text,
@@ -14,6 +13,7 @@ import {
   KeyboardAvoidingView,
   Platform
 } from "react-native";
+import { router } from "expo-router";
 
 import { useRouter } from "expo-router";
 
@@ -38,10 +38,7 @@ export default function Login() {
       style={Styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <StatusBar
-        backgroundColor="#FFFFFF"
-        barStyle="dark-content"
-      />
+      <StatusBar backgroundColor="#FFFFFF" barStyle="dark-content" />
 
       <View style={Styles.redDecoration} />
 
@@ -59,28 +56,20 @@ export default function Login() {
 
           <View style={Styles.logoDivider} />
 
-          <Text style={Styles.headerText}>
-            INVENTÁRIO
-          </Text>
+          <Text style={Styles.headerText}>INVENTÁRIO</Text>
         </View>
 
         <View style={Styles.content}>
-          <Text style={Styles.eyebrow}>
-            GESTÃO INTELIGENTE
-          </Text>
+          <Text style={Styles.eyebrow}>GESTÃO INTELIGENTE</Text>
 
-          <Text style={Styles.title}>
-            Bem-vindo de volta
-          </Text>
+          <Text style={Styles.title}>Bem-vindo de volta</Text>
 
           <Text style={Styles.subtitle}>
             Acesse para gerenciar materiais, equipamentos e kits dos laboratórios.
           </Text>
 
           <View style={Styles.form}>
-            <Text style={Styles.label}>
-              Matrícula
-            </Text>
+            <Text style={Styles.label}>Matrícula</Text>
 
             <View style={Styles.inputContainer}>
               <Text style={Styles.inputIcon}>♙</Text>
@@ -95,9 +84,7 @@ export default function Login() {
               />
             </View>
 
-            <Text style={Styles.label}>
-              Senha
-            </Text>
+            <Text style={Styles.label}>Senha</Text>
 
             <View style={Styles.inputContainer}>
               <Text style={Styles.inputIcon}>◷</Text>
@@ -125,13 +112,8 @@ export default function Login() {
               onPress={entrar}
               activeOpacity={0.85}
             >
-              <Text style={Styles.buttonText}>
-                Entrar
-              </Text>
-
-              <Text style={Styles.buttonArrow}>
-                ›
-              </Text>
+              <Text style={Styles.buttonText}>Entrar</Text>
+              <Text style={Styles.buttonArrow}>›</Text>
             </TouchableOpacity>
 
             <View style={Styles.help}>

@@ -11,11 +11,11 @@ export default function Inicio() {
   const dados = {
     aluno: {
       nome: "Aluno",
-      descricao: "Acompanhe seus materiais e empréstimos.",
+      descricao: "Bem-vindo ao almoxarifado.",
       cards: [
-        { titulo: "Materiais disponíveis", valor: "128", icone: "▤" },
-        { titulo: "Meus empréstimos", valor: "03", icone: "⇄" },
-        { titulo: "Solicitações", valor: "02", icone: "◷" }
+        { titulo: "Materiais disponíveis", valor: "128" },
+        { titulo: "Meus empréstimos", valor: "03" },
+        { titulo: "Solicitações", valor: "02" }
       ],
       acoes: [
         {
@@ -47,11 +47,11 @@ export default function Inicio() {
 
     professor: {
       nome: "Professor",
-      descricao: "Acompanhe materiais e movimentações.",
+      descricao: "Bem-vindo ao almoxarifado.",
       cards: [
-        { titulo: "Materiais disponíveis", valor: "128", icone: "▤" },
-        { titulo: "Empréstimos ativos", valor: "08", icone: "⇄" },
-        { titulo: "Devoluções pendentes", valor: "03", icone: "◷" }
+        { titulo: "Materiais disponíveis", valor: "128" },
+        { titulo: "Empréstimos ativos", valor: "08" },
+        { titulo: "Devoluções pendentes", valor: "03" }
       ],
       acoes: [
         {
@@ -83,11 +83,11 @@ export default function Inicio() {
 
     administrador: {
       nome: "Administrador",
-      descricao: "Gerencie o estoque e acompanhe o almoxarifado.",
+      descricao: "Bem-vindo ao almoxarifado.",
       cards: [
-        { titulo: "Total de materiais", valor: "128", icone: "▤" },
-        { titulo: "Estoque baixo", valor: "05", icone: "!" },
-        { titulo: "Empréstimos ativos", valor: "08", icone: "⇄" }
+        { titulo: "Materiais cadastrados", valor: "128" },
+        { titulo: "Estoque baixo", valor: "05" },
+        { titulo: "Empréstimos ativos", valor: "08" }
       ],
       acoes: [
         {
@@ -155,6 +155,7 @@ export default function Inicio() {
           </TouchableOpacity>
         </View>
 
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={Styles.content}>
           <View style={Styles.welcome}>
             <Text style={Styles.eyebrow}>PAINEL INICIAL</Text>
@@ -214,28 +215,10 @@ export default function Inicio() {
               </TouchableOpacity>
             ))}
           </View>
-
-          <View style={Styles.notice}>
-            <View style={Styles.noticeIcon}>
-              <Text style={Styles.noticeIconText}>i</Text>
-            </View>
-
-            <View style={Styles.noticeInfo}>
-              <Text style={Styles.noticeTitle}>
-                Informações do almoxarifado
-              </Text>
-
-              <Text style={Styles.noticeText}>
-                Consulte o inventário para verificar a disponibilidade dos materiais.
-              </Text>
-            </View>
-          </View>
         </View>
 
         <View style={Styles.footer}>
-          <Text style={Styles.footerText}>
-            Ambiente seguro SENAI
-          </Text>
+          <Text style={Styles.footerText}>Almoxarifado SENAI</Text>
         </View>
       </ScrollView>
     </View>
@@ -245,116 +228,76 @@ export default function Inicio() {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
-  },
-
-  scroll: {
-    paddingBottom: 25,
+    backgroundColor: "#FFFFFF"
   },
 
   header: {
-    height: 85,
-    paddingHorizontal: 23,
-    paddingTop: 25,
+    height: 75,
+    paddingHorizontal: 22,
+    paddingTop: 15,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#FFFFFF",
     borderBottomWidth: 1,
-    borderBottomColor: "#EEEEEE",
-  },
-
-  headerLeft: {
-    flexDirection: "row",
-    alignItems: "center",
+    borderBottomColor: "#EEEEEE"
   },
 
   logo: {
-    width: 83,
-    height: 38,
+    width: 85,
+    height: 42
   },
 
-  divider: {
-    width: 1,
-    height: 23,
-    backgroundColor: "#DDDDDD",
-    marginHorizontal: 10,
+  profile: {
+    paddingVertical: 8,
+    paddingHorizontal: 13,
+    backgroundColor: "#F4F4F4",
+    borderRadius: 5
   },
 
-  headerLabel: {
-    fontSize: 9,
-    color: "#333333",
-    fontWeight: "800",
-    letterSpacing: 1,
-  },
-
-  profileButton: {
-    width: 37,
-    height: 37,
-    borderRadius: 20,
-    backgroundColor: "#F5F5F5",
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "#EEEEEE",
-  },
-
-  profileIcon: {
-    fontSize: 19,
-    color: "#555555",
+  profileText: {
+    color: "#444444",
+    fontSize: 12
   },
 
   content: {
-    paddingHorizontal: 23,
-    paddingTop: 30,
+    paddingHorizontal: 22,
+    paddingTop: 30
   },
 
   welcome: {
-    marginBottom: 30,
+    marginBottom: 30
   },
 
-  eyebrow: {
-    color: "#E30613",
-    fontSize: 9,
-    fontWeight: "800",
-    letterSpacing: 2,
-    marginBottom: 8,
-  },
-
-  title: {
-    fontSize: 26,
-    fontWeight: "800",
-    color: "#222222",
+  greeting: {
+    fontSize: 25,
+    fontWeight: "700",
+    color: "#292929"
   },
 
   subtitle: {
-    fontSize: 12,
+    fontSize: 13,
     color: "#888888",
-    marginTop: 8,
-    lineHeight: 19,
-  },
-
-  sectionHeader: {
-    marginBottom: 14,
-    marginTop: 5,
+    marginTop: 7
   },
 
   sectionTitle: {
     fontSize: 17,
-    fontWeight: "800",
-    color: "#292929",
+    fontWeight: "700",
+    color: "#333333",
+    marginBottom: 12
   },
 
-  sectionCaption: {
-    color: "#999999",
-    fontSize: 11,
-    marginTop: 4,
+  summary: {
+    marginBottom: 30
   },
 
-  stats: {
+  summaryItem: {
     flexDirection: "row",
-    flexWrap: "wrap",
     justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: "#EEEEEE",
     marginBottom: 29,
   },
 
@@ -387,113 +330,45 @@ const Styles = StyleSheet.create({
     marginBottom: 9,
   },
 
-  statIconText: {
+  summaryName: {
+    color: "#555555",
+    fontSize: 13
+  },
+
+  summaryValue: {
     color: "#E30613",
     fontSize: 16,
-    fontWeight: "700",
+    fontWeight: "700"
   },
 
-  statValue: {
-    color: "#252525",
-    fontSize: 21,
-    fontWeight: "800",
+  menu: {
+    marginBottom: 15
   },
 
-  statTitle: {
-    color: "#888888",
-    fontSize: 9,
-    lineHeight: 13,
-    marginTop: 4,
-  },
-
-  actions: {
-    gap: 11,
-    marginBottom: 25,
-  },
-
-  actionCard: {
-    minHeight: 72,
-    borderWidth: 1,
-    borderColor: "#EEEEEE",
-    borderRadius: 12,
+  menuItem: {
+    minHeight: 65,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 13,
-    backgroundColor: "#FFFFFF",
+    justifyContent: "space-between",
+    borderBottomWidth: 1,
+    borderBottomColor: "#EEEEEE",
+    paddingVertical: 12
   },
 
-  actionIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 10,
-    backgroundColor: "#FFF0F0",
-    alignItems: "center",
-    justifyContent: "center",
+  menuInfo: {
+    flex: 1
   },
 
-  actionIconText: {
-    color: "#E30613",
-    fontSize: 20,
-    fontWeight: "700",
-  },
-
-  actionInfo: {
-    flex: 1,
-    marginLeft: 13,
-  },
-
-  actionTitle: {
-    color: "#333333",
-    fontSize: 12,
-    fontWeight: "700",
-  },
-
-  actionDescription: {
-    color: "#999999",
-    fontSize: 10,
-    marginTop: 5,
-  },
-
-  actionArrow: {
-    color: "#BBBBBB",
-    fontSize: 25,
-    marginLeft: 5,
-  },
-
-  notice: {
-    backgroundColor: "#FFF7F7",
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "#F9E1E1",
-    padding: 14,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-
-  noticeIcon: {
-    width: 27,
-    height: 27,
-    borderRadius: 15,
-    backgroundColor: "#E30613",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  noticeIconText: {
-    color: "#FFFFFF",
+  menuTitle: {
     fontSize: 14,
-    fontWeight: "800",
+    fontWeight: "600",
+    color: "#333333"
   },
 
-  noticeInfo: {
-    flex: 1,
-    marginLeft: 11,
-  },
-
-  noticeTitle: {
-    color: "#333333",
+  menuDescription: {
     fontSize: 11,
-    fontWeight: "700",
+    color: "#888888",
+    marginTop: 5
   },
 
   noticeText: {
@@ -503,13 +378,19 @@ const Styles = StyleSheet.create({
     marginTop: 4,
   },
 
+  arrow: {
+    color: "#999999",
+    fontSize: 24,
+    marginLeft: 10
+  },
+
   footer: {
-    alignItems: "center",
-    marginTop: 30,
+    paddingVertical: 25,
+    alignItems: "center"
   },
 
   footerText: {
     color: "#AAAAAA",
-    fontSize: 10,
-  },
+    fontSize: 11
+  }
 });
